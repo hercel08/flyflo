@@ -1,0 +1,255 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    --Raleway: 'Raleway', sans-serif;
+    --Pale: hsl(243, 100%, 93%);
+    --Grayish: hsl(229, 7%, 55%);
+    --Dark: hsl(228, 56%, 26%);
+    --Very: hsl(229, 57%, 11%);
+    --Gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+body {
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.first {
+    margin-top: 130px;
+    padding: 40px;
+    background: var(--Dark);
+    width: 300px;
+    height: 200px;
+    border-radius: 10px 100px 10px 10px;
+}
+.location {
+    position: relative;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px;
+}
+.document {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--Very);
+    border-radius: 10px;
+}
+.folder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--Very);
+    border-radius: 10px;
+}
+.upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--Very);
+    border-radius: 10px;
+}
+.container {
+    position: absolute;
+    right: 10%;
+    margin-top: 20px;
+    background: var(--Dark);
+    width: 300px;
+    height: 170px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p {
+    color: var(--Grayish);
+    font-size: .925rem;
+    font-family: var(--Raleway);
+    padding: 20px;
+    margin-top: 10px;
+}
+span {
+    font-family: var(--Raleway);
+    font-weight: 700; 
+}
+span.one {
+    font-size: .675rem;
+}
+span.five {
+    position: absolute;
+    top: 19.5%;
+}
+span.GB {
+    margin-left: 8px;
+}
+.note span {
+    color: white;
+}
+.meter {
+    width: 250px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: hsl(229, 66%, 16%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.meter-bar {
+    margin-left: 3px;
+    border-radius: 10px;
+    width: 180px;
+    height: 12px;
+    background: var(--Gradient);
+}
+.meter-gauge {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 10px;
+    margin-left: 168px;
+    margin-top: 1px;
+}
+.digit {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: var(--Raleway);
+    font-size: .675rem;
+    font-weight: 700;
+}
+.min-gb {
+    position: relative;
+    right: 130%;
+}
+.max-gb {
+    position: relative;
+    left: 130%;
+}
+.display-plan {
+    width: 170px;
+    height: 70px;
+    background: white;
+    position: absolute;
+    top: 71.5%;
+    right: 30%;
+    border-radius: 10px;
+}
+.plan-digit {
+    font-size: 2.325rem;
+    font-weight: 700;
+    position: relative;
+    top: 20%;
+    left: 10%;
+}
+.plan-digit span:first-child {
+    font-size: 2rem;
+}
+.plan-digit span:last-child {
+    position: absolute;
+    top: 20%;
+}
+.gb-left {
+    font-family: var(--Raleway);
+    font-size: .675rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--Grayish);
+    position: relative;
+    left: 55%;
+    bottom: 18%;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 500px) {
+    body {
+        background: var(--Very);
+        background-image: url(images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        height: 100vh;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        top: 10%;
+        right: 18%;
+    }
+    .container {
+        right: 7%;
+        top: 49%;
+        width: 500px;
+        height: 150px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 40px;
+    }
+    .digit {
+        position: relative;
+        left: 20%;
+    }
+    p {
+        padding: 20px 0px;
+    }
+    span.five {
+        top: 37%;
+    }
+    .meter {
+        width: 400px;
+    }
+    .meter-bar {
+        width: 300px;
+    }
+    .meter-gauge {
+        margin-left: 288px;
+    }
+    .max-gb {
+        left: 350%;
+    }
+    .display-plan {
+        position: absolute;
+        left: 80%;
+        top: 45%;
+        width: 150px;
+        border-bottom-right-radius: 0px;
+    }
+    .edge {
+        width: 30px;
+        height: 20px;
+        background: white;
+        position: absolute;
+        left: 25%;
+        top: 199%;
+        transform: skewY(40deg);
+    }
+}
